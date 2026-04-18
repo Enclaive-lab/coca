@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite src --port 3000",
-    "build": "vite build src",
-    "preview": "vite preview src --port 3000",
+    "dev": "vite --port 3000",
+    "build": "vite build",
+    "preview": "vite preview --port 3000",
     "lint": "npm run lint:js && npm run lint:css && npm run format:check",
     "lint:js": "eslint .",
     "lint:css": "stylelint \"src/**/*.css\"",
@@ -20,9 +20,15 @@
     "globals": "^17.5.0",
     "prettier": "^3.8.3",
     "sass": "^1.99.0",
+    "sass-embedded": "^1.99.0",
+    "sharp": "^0.34.5",
     "stylelint": "^17.8.0",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-order": "^8.1.1",
-    "vite": "^8.0.4"
+    "svgo": "^4.0.1",
+    "vite": "^8.0.4",
+    "vite-plugin-html-inject": "^1.1.2",
+    "vite-plugin-image-optimizer": "^2.0.3",
+    "vite-plugin-minify": "^2.1.0"
   }
 }
