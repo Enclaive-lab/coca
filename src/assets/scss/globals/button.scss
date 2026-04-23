@@ -1,0 +1,15 @@
+.button {
+  &-form {
+    padding: 16px 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    border-radius: 100px;
+
+    &:hover {
+      opacity: 0.9;
+      transition: opacity var(--transition);
+    }
+  }
+}
