@@ -1,6 +1,7 @@
 .hero {
-  overflow-x: hidden;
   padding-top: 87px;
+  padding-bottom: 140px;
+  overflow-y: hidden;
   @include mini-desktop {
     padding: 67px 0 121px;
   }
@@ -55,7 +56,6 @@
   &__left {
     position: relative;
     z-index: var(--z-index-1);
-    max-width: 585px;
   }
 
   &__title {
@@ -89,7 +89,7 @@
   }
 
   &__form {
-    @include flex-all-center;
+    display: flex;
     gap: 16px;
 
     @include mini-desktop {
@@ -213,12 +213,12 @@
     }
 
     &-body {
-      &-th {
+      &-td {
         font-weight: 700;
         font-size: 20px;
         line-height: 130%;
         color: #fff;
-
+        white-space: nowrap;
         &:nth-child(1) {
           padding-right: 80px;
         }
