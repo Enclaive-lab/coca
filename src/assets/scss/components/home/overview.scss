@@ -35,7 +35,7 @@
     @include flex-all-between;
     flex-wrap: wrap;
     gap: 56px;
-
+    padding-bottom: 100px;
     @include tablet {
       flex-direction: column;
       align-items: center;
