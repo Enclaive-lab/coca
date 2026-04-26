@@ -140,10 +140,6 @@
     @include mini-desktop {
       max-width: 700px;
     }
-
-    @include mobile {
-      font-size: 14px;
-    }
   }
 
   &__item {
@@ -155,11 +151,19 @@
     line-height: 178%;
     color: var(--neutral-color-100);
 
+    @include mini-desktop {
+      width: 500px;
+      max-width: 700px;
+    }
+
     @include mobile {
       font-size: 14px;
+      max-width: 300px;
     }
-    @include mini-desktop {
-      max-width: 700px;
+
+    @include small-mobile {
+      font-size: 14px;
+      max-width: 300px;
     }
 
     &:not(:last-child) {
