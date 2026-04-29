@@ -4,6 +4,11 @@
   justify-content: center;
 }
 
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
 @mixin flex-justify-between {
   display: flex;
   justify-content: space-between;
