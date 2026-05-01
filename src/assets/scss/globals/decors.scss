@@ -1,0 +1,36 @@
+.hero-decors {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -80px;
+    z-index: var(--z-index-0);
+    display: inline-block;
+    width: 551px;
+    height: 551px;
+    opacity: 0.2;
+    background: #fa7515;
+    filter: blur(220px);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -400px;
+    bottom: -170px;
+    z-index: var(--z-index-0);
+    display: inline-block;
+    width: 525px;
+    height: 525px;
+    background: var(--success-color-70);
+    filter: blur(180px);
+    pointer-events: none;
+
+    @include mini-desktop {
+      width: 325px;
+      height: 325px;
+    }
+  }
+}
