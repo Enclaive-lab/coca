@@ -1,0 +1,154 @@
+.believe {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    z-index: var(--z-index-0);
+    display: inline-block;
+    width: 792px;
+    height: 991px;
+    opacity: 0.2;
+    background: #fa7515;
+    filter: blur(220px);
+    pointer-events: none;
+
+    @include tablet {
+      display: none;
+    }
+  }
+  padding-bottom: 159px;
+
+  @include tablet {
+    padding-bottom: 90px;
+  }
+
+  @include mobile {
+    padding-bottom: 64px;
+  }
+
+  &__slider {
+    overflow: visible;
+    position: relative;
+
+    .believe__slide {
+      flex-shrink: 0;
+      width: 502px;
+
+      @include small-tablet {
+        width: min(502px, 82vw);
+      }
+    }
+  }
+
+  &__slide {
+    height: 629px;
+
+    @include small-tablet {
+      height: auto;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__slide--tall {
+    .believe__img {
+      @include small-tablet {
+        aspect-ratio: 502 / 629;
+        height: auto;
+      }
+    }
+  }
+  &__slide--side {
+    .believe__img {
+      opacity: 0.6;
+    }
+  }
+
+  &__slide--card {
+    display: flex;
+    flex-direction: column;
+
+    .believe__img {
+      height: 374px;
+
+      @include small-tablet {
+        aspect-ratio: 502 / 374;
+        height: auto;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 24px 0 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: var(--neutral-color-100);
+  }
+
+  &__descr {
+    font-weight: 500;
+    padding-top: 8px;
+    font-size: 18px;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+  }
+
+  &__link {
+    margin-top: 32px;
+    border-radius: 100px;
+    padding: 16px 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
+    background-color: #1d1e25;
+  }
+
+  &__btns {
+    position: absolute;
+    top: 15%;
+    left: 502px;
+    z-index: var(--z-index-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    color: #1d1e25;
+    background-color: var(--neutral-color-100);
+    transform: translate(-39%, -39%);
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__btn {
+    transform: translate(-20%, -20%);
+    width: 10px;
+    height: 17px;
+
+    svg {
+      display: block;
+      width: 10px;
+      height: 17px;
+    }
+  }
+}

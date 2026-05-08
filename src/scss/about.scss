@@ -1,0 +1,11 @@
+@import './mixins';
+@import './base/';
+@import './globals';
+
+//components
+@import './components/header';
+@import './components/about/audience';
+@import './components/about/believe';
+@import './components/about/quite';
+@import './components/about/content';
+@import './components/footer';
