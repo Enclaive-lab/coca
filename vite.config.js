@@ -19,6 +19,7 @@ export default defineConfig({
         about: './src/About.html',
         pricing: './src/pricing.html',
         contact: './src/contact.html',
+        activityUpdates: './src/Activity-updates.html',
       },
     },
   },

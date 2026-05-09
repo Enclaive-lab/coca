@@ -1,0 +1,69 @@
+.journal {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: var(--black-bg-color);
+
+  &__container {
+    background-color: transparent;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+
+    &-column {
+      @include flex-column;
+      gap: 159px;
+    }
+
+    &-info {
+      @include flex-column;
+      gap: 24px;
+
+      &-title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 120%;
+        color: #fff;
+        max-width: 583px;
+
+        @include mobile{
+          font-size: 30px;
+        }
+
+         @include small-mobile{
+          font-size: 23px;
+        }
+
+        &--underline {
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+        }
+
+        &--width {
+          max-width: 440px;
+        }
+      }
+
+      &-descr {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 178%;
+        color: var(--neutral-color-150);
+        max-width: 515px;
+
+         @include mobile{
+          font-size: 15px;
+        }
+          @include small-mobile{
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-img {
+      margin-bottom: 24px;
+    }
+  }
+}

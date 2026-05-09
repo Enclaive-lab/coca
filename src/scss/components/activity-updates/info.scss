@@ -1,0 +1,130 @@
+.info {
+  padding-bottom: 168px;
+
+  &__list {
+    @include flex-all-between;
+    gap: 30px;
+    max-width: 750px;
+    margin-bottom: 80px;
+    cursor: pointer;
+
+    @include small-tablet {
+      @include flex-column;
+    }
+
+    @include mini-desktop {
+      margin: 0 auto 80px;
+    }
+  }
+
+  &__item {
+    &:first-child {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: var(--neutral-color-100);
+    }
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--neutral-color-150);
+  }
+
+  &__slider {
+    overflow: visible;
+
+    &-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 160px;
+      left: 39%;
+      position: absolute;
+      z-index: var(--z-index-2);
+      width: 100px;
+      height: 100px;
+      transform: translateX(8%);
+      border-radius: 50%;
+      background-color: #fff;
+
+      @include tablet {
+        left: 59%;
+      }
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__slider &__slide {
+    width: 515px;
+
+    @include mobile {
+      width: min(515px, 82vw);
+    }
+  }
+
+  &__article {
+    &-head {
+      @include flex-all-between;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: var(--neutral-color-150);
+    }
+    &-img {
+      display: block;
+      width: 100%;
+      height: 428px;
+      object-fit: cover;
+    }
+
+    &-date {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: var(--neutral-color-150);
+    }
+
+    &-wrapper {
+      &--size {
+        width: 469px;
+
+        @include small-mobile {
+          max-width: 250px;
+        }
+      }
+
+      @include flex-column;
+      gap: 16px;
+
+      &-title {
+        margin-top: 24px;
+        font-weight: 700;
+        line-height: 125%;
+        letter-spacing: -0.03em;
+        color: var(--neutral-color-100);
+      }
+
+      &-descr {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--neutral-color-150);
+        max-width: 332px;
+
+        &--width {
+          max-width: 459px;
+
+          @include small-mobile {
+            max-width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
