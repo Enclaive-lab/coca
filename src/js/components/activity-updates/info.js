@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
 export const useInfoSlider = () => {
@@ -9,9 +10,14 @@ export const useInfoSlider = () => {
   }
 
   new Swiper(slider, {
+    modules: [Navigation],
     slidesPerView: 'auto',
     spaceBetween: 32,
-    loop: true,
+    rewind: true,
+    navigation: {
+      nextEl: '.info__btn--next',
+      prevEl: '.info__btn--prev',
+    },
     breakpoints: {
       0: {
         centeredSlides: true,

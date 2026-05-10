@@ -13,7 +13,7 @@ export const useBelieveSlider = () => {
     modules: [Navigation],
     slidesPerView: 'auto',
     spaceBetween: 32,
-    loop: true,
+    rewind: true,
     centeredSlides: false,
     navigation: {
       nextEl: '.believe__btn--next',
@@ -40,9 +40,14 @@ export const useContentSlider = () => {
   }
 
   new Swiper(slider, {
+    modules: [Navigation],
     slidesPerView: 'auto',
     spaceBetween: 32,
-    loop: true,
+    rewind: true,
+    navigation: {
+      nextEl: '.content__btn--next',
+      prevEl: '.content__btn--prev',
+    },
 
     breakpoints: {
       0: {

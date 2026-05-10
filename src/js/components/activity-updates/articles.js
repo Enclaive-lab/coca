@@ -14,7 +14,7 @@ export const useArticlesSlider = () => {
     modules: [Navigation],
     slidesPerView: 'auto',
     spaceBetween: 32,
-    loop: true,
+    rewind: true,
     watchOverflow: false,
     navigation: {
       prevEl: articles.querySelector('.articles__btn--prev'),

@@ -34,7 +34,8 @@
   }
 
   &__slider {
-    overflow: visible;
+    overflow: hidden;
+    position: relative;
 
     &-btns {
       display: flex;
@@ -57,6 +58,28 @@
       @include small-tablet {
         display: none;
       }
+    }
+  }
+
+  &__btn {
+    position: relative;
+    flex: 1 1 50%;
+    align-self: stretch;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 11px;
+      height: 11px;
+      border-top: 3px solid #7e8492;
+      border-right: 3px solid #7e8492;
+      transform: translate(-35%, -50%) rotate(45deg);
+    }
+
+    &--prev::before {
+      transform: translate(-65%, -50%) rotate(-135deg);
     }
   }
 
