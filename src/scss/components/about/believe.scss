@@ -67,8 +67,12 @@
 
   &__btn {
     position: relative;
-    flex: 1 1 50%;
+    flex: 0 0 24px;
     align-self: stretch;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
 
     &::before {
       content: '';
@@ -79,11 +83,11 @@
       height: 11px;
       border-top: 3px solid #7e8492;
       border-right: 3px solid #7e8492;
-      transform: translate(-35%, -50%) rotate(45deg);
+      transform: translate(-55%, -50%) rotate(45deg);
     }
 
     &--prev::before {
-      transform: translate(-65%, -50%) rotate(-135deg);
+      transform: translate(-45%, -50%) rotate(-135deg);
     }
   }
 
