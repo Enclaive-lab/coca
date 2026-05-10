@@ -1,0 +1,132 @@
+.author-info {
+  padding-bottom: 160px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 46px;
+    align-items: flex-start;
+    max-width: 940px;
+  }
+
+  &__img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__content {
+    min-width: 0;
+  }
+
+  &__top {
+    @include flex-align-center;
+    gap: 24px;
+    margin-bottom: 18px;
+  }
+
+  &__socials {
+    @include flex-align-center;
+    gap: 28px;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: var(--neutral-color-100);
+    background-color: #161a341a;
+  }
+
+  &__share {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--neutral-color-100);
+  }
+
+  &__label {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--neutral-color-150);
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 131%;
+    color: var(--neutral-color-100);
+  }
+
+  &__position {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--neutral-color-150);
+  }
+
+  &__text {
+    max-width: 650px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 178%;
+    color: var(--neutral-color-100);
+  }
+
+  @include small-tablet {
+    padding-bottom: 96px;
+
+    &__container {
+      gap: 32px;
+    }
+
+    &__top {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    &__socials {
+      gap: 16px;
+    }
+  }
+
+  @include mobile {
+    padding-bottom: 72px;
+
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__img {
+      width: 160px;
+      height: 160px;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+
+[data-theme='dark'] {
+  .author-info {
+    &__social-link {
+      background-color: #343542;
+
+      &:hover {
+        background-color: #4b4c5a;
+      }
+    }
+  }
+}

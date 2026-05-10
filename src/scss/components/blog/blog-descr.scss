@@ -1,0 +1,44 @@
+.blog-descr {
+  padding-bottom: 48px;
+
+  &__container {
+    max-width: 940px;
+  }
+
+  &__title {
+    margin: 0 0 24px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    color: var(--neutral-color-140);
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 178%;
+    color: var(--neutral-color-100);
+  }
+
+  @include small-tablet {
+    padding-bottom: 64px;
+
+    &__title {
+      font-size: 34px;
+    }
+  }
+
+  @include mobile {
+    padding-bottom: 48px;
+
+    &__title {
+      margin-bottom: 16px;
+      font-size: 30px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

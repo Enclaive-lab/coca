@@ -1,0 +1,21 @@
+<section class="blog-descr">
+  <div class="container blog-descr__container">
+    <h2 class="blog-descr__title">Initial approach</h2>
+    <p class="blog-descr__text">
+      Our initial approach went like this: The web application would read a .csv file line-by-line
+      and submit an array of entries to the backend REST API. Processing is in real time,
+      immediately after the user makes a request for the process to start, he expects a result.
+      Another approach is to apply vertical scaling to AWS architecture. Meaning we used larger,
+      more expensive instances that have more RAM and processing power. This system worked well for
+      smaller datasets, maybe up to 5k entries, but for larger datasets multiple problems arose.
+      This solution is prone to failure due to long request time. Also, because of some 3rd party
+      services that aren't optimized for large scale loads or they don't have batch endpoints. 3rd
+      party services also tend to protect their architecture from making a huge bill on their end.
+      The whole process was done in real-time. The request can take a lot of time hanging in there
+      while the backend would do all the work and return the result to the client. The request was
+      limited to 300 seconds (at time of writing the article) before AWS would cancel it... Also I
+      need to mention that the user has to wait a few minutes to see the results. They can't use the
+      app during the process, which makes for a bad user experience.
+    </p>
+  </div>
+</section>

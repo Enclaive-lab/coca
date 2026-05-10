@@ -131,6 +131,18 @@
       background-color var(--transition),
       border-color var(--transition);
 
+    &:hover {
+      background-color: var(--neutral-color-100);
+      border-color: var(--neutral-color-100);
+
+      & svg path {
+        fill: var(--neutral-color-10);
+      }
+    }
+
+    &--next {
+      transform: rotate(-180deg);
+    }
     @include small-mobile {
       width: 40px;
       height: 40px;
