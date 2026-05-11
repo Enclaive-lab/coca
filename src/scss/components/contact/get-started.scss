@@ -26,10 +26,11 @@
     }
     &-wrapper {
       position: absolute;
+      z-index: var(--z-index-1);
       padding: 56px 48px;
       left: 8%;
       min-width: 608px;
-      background-color: var(--neutral-color-10);
+      background-color: #fff;
       border: 1px solid var(--neutral-color-40);
 
       @include tablet {
@@ -55,14 +56,14 @@
       font-weight: 600;
       line-height: 122%;
       letter-spacing: -0.02em;
-      color: var(--neutral-color-100);
+      color: #1d1e25;
     }
 
     &-text {
       margin-bottom: 48px;
       font-weight: 400;
       line-height: 167%;
-      color: var(--neutral-color-150);
+      color: #7e8492;
     }
 
     &-link {
@@ -103,6 +104,7 @@
       width: 100%;
       font-weight: 400;
       line-height: 171%;
+      background-color: #fff;
       color: #7e8492;
 
       &--small {
@@ -113,7 +115,6 @@
         }
 
         @include small-tablet {
-          width: 200px;
         }
       }
       &--textarea {
@@ -125,15 +126,59 @@
     &-btn {
       padding: 16px 32px;
       color: #fff;
-      background-color: #1d1e25;
+      background-color: var(--black-bg-color);
     }
   }
 
   .iti {
+    --iti-hover-color: #f3f4f6;
+    --iti-border-color: #ced1d8;
+    --iti-dropdown-bg: #fff;
+    --iti-icon-color: #606060;
+
     width: 100%;
+
+    &__dropdown-content {
+      color: #1d1e25;
+      border-color: #ced1d8;
+      box-shadow: 0 12px 30px rgb(29 30 37 / 12%);
+    }
+
+    &__search-input {
+      color: #1d1e25;
+      background-color: #fff;
+
+      &::placeholder {
+        color: #7e8492;
+      }
+    }
+
+    &__country {
+      color: #1d1e25;
+
+      &:hover,
+      &.iti__highlight {
+        background-color: #f3f4f6;
+      }
+    }
+
+    &__country-name {
+      color: #1d1e25;
+    }
+
+    &__dial-code {
+      color: #7e8492;
+    }
+
+    &__selected-country {
+      color: #1d1e25;
+    }
   }
 
   &__img {
+    position: relative;
+    z-index: 0;
+
     @include small-tablet {
       display: none;
     }
